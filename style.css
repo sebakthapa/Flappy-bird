@@ -31,7 +31,6 @@ body{
 }
 
 .playground .bird{
-	pointer-events: none;
 	position: absolute;
 	width: 60px;
 	height: 50px;
@@ -44,7 +43,6 @@ body{
 }
 
 .obstacle{
-	pointer-events: none;
 	position: absolute;
 	width: 70px;
 	height: 100%;
@@ -73,7 +71,6 @@ body{
 }
 
 .hole{
-	pointer-events: none;
 	position: absolute;
 	width: 74px;
 	background: hsl(238, 100%, 88%);
