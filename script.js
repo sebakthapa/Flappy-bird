@@ -151,7 +151,7 @@ function App(){
 	let birdRotate = 0;
 	let birdGravity = setInterval(gravity,20);
 
-	playground.addEventListener('click',pullUp);
+	document.body.addEventListener('click',pullUp);
 	window.addEventListener('keydown',function(e){
 		// swoosh.play();
 		if(e.keyCode == 32){
