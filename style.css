@@ -1,0 +1,187 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body{
+	position: relative;
+	overflow: hidden;
+	background: hsl(0, 0%, 94%);
+	min-width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+
+.playground{
+	pointer-events: none;
+	position: relative;
+	margin-top: ;
+	overflow: hidden;
+	width: 100vw;
+	height: 90vh;
+	max-width: 800px;
+	background: hsl(238, 100%, 88%);
+	margin: auto;
+	z-index: -2;
+}
+
+.playground .bird{
+	position: absolute;
+	width: 60px;
+	height: 50px;
+	background: url('bird.png');
+	background-size: contain;
+	border-radius: 100px;
+	left: 10%;
+	bottom: 50%;
+	z-index: 2;
+}
+
+.obstacle{
+	position: absolute;
+	width: 70px;
+	height: 100%;
+	background: url('pillar.png');
+	background-size: contain !important;
+	background-position: left;
+	top: 0;
+	left: 100%;
+	z-index: -1;
+	/* border: 1px solid; */
+}
+
+.playground .score-board{
+	position: absolute;
+	top: 0;
+	right: 10px;
+	margin-right: 20px;
+	margin-top: 30px;
+	padding: 10px 20px;
+	font-size: 1.3rem;
+	border-radius: 100px;
+	background: hsl(0, 0%, 88%);
+	border: 1px solid hsl(0, 0%, 80%);
+	z-index: 11111;
+}
+
+.hole{
+	position: absolute;
+	width: 74px;
+	background: hsl(238, 100%, 88%);
+	left: 100%;
+	z-index: 1;
+
+	/* top: calc(50px) */
+}
+
+
+.game-over,
+.home{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2rem 3rem;
+	border-radius: 20px;
+	color: white;
+	background: #7d4700;
+	opacity: .9;
+	/* display: none; */
+}
+
+.game-over{
+	display: none;
+}
+.game-over h1,
+.home h1{
+	margin-bottom: .2rem;
+}
+.game-over h5,
+.home h5{
+	color: hsl(0, 0%, 90%);
+	margin-bottom: 1.7rem;
+}
+.game-over button,
+.home button{
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: white;
+	cursor: pointer;
+	padding: 7px 20px;
+	border-radius: 200px;
+	background:#877700;
+	border: 1px solid #695200;
+	transition: .3s;
+}
+
+.game-over button,
+.home button:hover{
+	background: #978700;
+}
+.home{
+	/* width: 50%; */
+}
+
+.home h4,
+.game-over h4{
+	margin-bottom: 30px;
+}
+
+.home .input{
+	outline: none;
+	height: 30px;
+	width: 150px;
+	margin-bottom: 10px;
+	font-size: 1.2rem;
+	text-transform: capitalize;
+	padding: 3px 10px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.start-timer{
+	pointer-events: none;
+	position: absolute;
+	background: transparent;
+	width: 50%;
+	height: 50%;
+	font-size: 15rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	color: gray;
+	text-shadow: 2px 2px 10px blue;
+	transition: .3s;
+	display: none;
+}
+
+ .skill{
+ 	width: 300px;
+ 	padding: 5px 0px;
+ 	border-radius: 100px;
+ 	display: flex;
+ 	justify-content: space-between;
+ 	margin-bottom: 10px;
+ }
+
+
+@media (max-width: 468px) {
+.home,.game-over{
+	padding: 15px 15px;
+	width: 95%;
+}
+.skill{
+	width: 250px;
+}
+}

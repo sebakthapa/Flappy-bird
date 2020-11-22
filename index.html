@@ -1,0 +1,41 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Flappy bird</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="game-over">
+				<h1>Game Over!</h1>
+				<h5>Better Luck Next Time!</h5>
+				<h4>Score: &nbsp;<span class="score"> 0</span></h4>
+				<button class="button">Try again</button>
+		</div>
+		
+		<div class="home">
+				<h1>Flappy Bird</h1>
+				<h5>Enjoy every moment!</h5>
+				<h4>High Score: &nbsp;<span class="score">0</span></h4>
+				<span id="skill">You are:</span>
+				<div class="skill">
+
+				<label for="novice"><input type="radio" name="skill" id="novice" checked> Novice </label>
+				<label for="intermidate"><input type="radio" name="skill" id="intermidate"> Intermidate </label>
+				<label for="expert"><input type="radio" name="skill" id="expert"> Expert </label>
+				</div>
+				<button class="button">Start</button>
+		</div>
+
+		<div class="start-timer">
+			3
+		</div>
+		<div class="playground">
+			<span class="score-board">Score: &nbsp; <span class="score">0</span></span>
+			<div class="bird"></div>
+		</div>
+
+		
+		<script src="script.js"></script>
+	</body>
+</html>
